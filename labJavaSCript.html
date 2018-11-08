@@ -1,0 +1,102 @@
+<html>
+<body>
+	<h2>Revert</h2>
+	<input id="valForRevert" type="text"></input>
+	<input type="submit" onclick="revertText()" value="Revert"></input><br/>
+	<h2>Remove letter from a specific position</h2>
+	Position:<input id="position" type="number"></input><br/>
+	TextVal:<input id="text" type="text"></input>
+	<input type="submit" onclick="removeLetter()" value="Remove letter"></input><br/>
+	<h2>Div 3 | 7</h2>
+	Number:<input id="number" type="number"></input>
+	<input type="submit" onclick="checkDiv()" value="Check Div"></input><br/>
+	<h2>Check numeric type</h2>
+	Number:<input id="numeric" type="text"></input>
+	<input type="submit" onclick="checkNum()" value="Check Type"></input><br/>
+	<h2>Sum of array</h2>
+	<h4>Enter value with "," betwen them ex:"1,2,3"</h4>
+	Array:<input id="arr" type="text"></input>
+	<input type="submit" onclick="sum()" value="Sum"></input><br/>
+	<h2>Object propertie</h2>
+	
+	Object:<input id="obj" type="text"></input><br/>
+	OProp:<input id="prop" type="text"></input><br/>
+	OKey :<input id="key" type="text"></input>
+	<input type="submit" onclick="obj()" value="Obj"></input><br/>
+	<script>
+		function revertText() {
+			var str = document.querySelector("#valForRevert").value;
+			var splitStr = str.split("");
+			var reversArr = splitStr.reverse();
+			var joinArr = reversArr.join("");
+			alert(joinArr);
+ 		}
+		
+		function removeLetter() {
+			var position = document.querySelector("#position").value;
+			var str = document.querySelector("#text").value;
+			var newStr = str.substring(0,position - 1) + str.substring(position, str.length);
+			alert(newStr);
+		}
+		
+		function checkDiv() {
+			var nr = document.querySelector("#number").value;
+			if(nr > 0 && (nr % 3 == 0 || nr % 7 == 0)) {
+				alert(nr + " is divisible");
+			}
+			else {
+				alert(nr + " isn't divisible");
+			}
+		}
+		
+		function checkNum() {
+			var nr = document.querySelector("#numeric").value;
+			if(nr == 0) {
+				alert("Null value");
+			}
+			else if(isNaN(nr)) {
+				alert("Is char");
+			}
+			else {
+				alert("Is numeric");
+			}
+		}
+		
+		function sum(){
+			var arrVal = document.querySelector("#arr").value;
+			if(arrVal.length == 1 && !isNaN(arrVal)) {
+				alert(arrVal);
+			} else if(arrVal.match(/,/g) && arrVal.length > 1) {
+				var array = arrVal.split(",");
+			
+				var total = 0;
+				if(Array.isArray(array)) {
+					for(var i=0; i < array.length; i++) {
+						if(!isNaN(array[i])) {
+							total+= parseInt(array[i]);
+						}
+					
+					}
+					alert(total);
+				}
+				else {
+					alert("This isn't an array");
+				}
+			} else {
+				alert("You forget about comma");
+			}			
+		}
+		//inca nu functioneaza
+		function obj() {
+			var obj = document.querySelector("#obj").value;
+			var key = document.querySelector("#key").value;
+			var array = obj.split(/:"|",|"/);
+			var objProp = [];
+			for(var i=0; i < array.length; i+=2) {
+				objProp.push(array[i]+":"+array[i+1]);
+			}
+			alert(hasOwnProperty.call(obj, key));
+		}
+	</script>
+</body>
+</html>
