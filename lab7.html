@@ -1,0 +1,77 @@
+<html>
+<body>
+<script>
+	//Ex1
+	/*
+	var a = 1;
+	function b() {
+		a = 10;
+		return function a() {
+		
+		}
+	}
+	
+	b();
+	console.log('a=' + a);
+	*/
+	
+	//Ex2
+	/*
+	for(var i = 0; i < 5; i++) {
+        setTimeout((function() {console.log(i); })(), i * 1000 );
+	}
+	*/
+	//Ex3
+	/*
+	try {
+		setTimeout(function() {
+			try {
+				throw new Error('example');
+			}
+			catch(err) {
+				console.log(err);
+			}
+		},1000);
+	}
+	catch(err) {
+		console.log(err);
+	}
+	*/
+	//Ex4
+	/*
+	'use strict';
+	class Animal {
+		constructor(type, color) {
+			this.type = type;
+			var _color = color;
+			this.getColor = function() { return _color;}
+		}
+	}
+	
+	class Fish extends Animal {
+		constructor(fishType) {
+			super(fishType);
+			var _fishType = fishType;
+			this.getFishType = function() {return _fishType;}
+		}
+	}
+	
+	class Dog extends Animal {
+		constructor(dogType) {
+			super(dogType);
+			var _dogType = new DogType(dogType, this.color);
+			this.getDogType = function() {return _dogType;}
+		}
+	}
+	
+	class DogType {
+		constructor(typeName, furColor){
+			this.typeName = typeName;
+			var _furColor = furColor;
+			this.getFurColor = function() {return _furColor;}
+		}
+	}
+	*/	
+</script>
+</body>
+</html>
