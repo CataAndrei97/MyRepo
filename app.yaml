@@ -4,6 +4,8 @@ api_version: 1
 handlers:
 - url: /
   script: index.php
+- url: /login
+  script: login.php
 # Serve images as static resources.
 - url: /(.+\.(gif|png|jpg))$
   static_files: \1
