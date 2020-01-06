@@ -11,5 +11,17 @@ handlers:
   application_readable: true
 
 # Serve php scripts.
-- url: /(.+\.php)$
+- url: /(.+\.(php|css|js))$
   script: \1
+  
+- url: /css
+  static_dir: css
+  
+- url: /img
+  static_dir: img
+  
+- url: /js
+  static_dir: js
+  
+- url: /sound
+  static_dir: sound
