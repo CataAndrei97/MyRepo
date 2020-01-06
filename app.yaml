@@ -1,15 +1,15 @@
-# Use the PHP 7.3 runtime (BETA) by replacing "php72" below with "php73"
-runtime: php73
+runtime: php55
 api_version: 1
-threadsafe: true
-
-# Defaults to "serve index.php" and "serve public/index.php". Can be used to
-# serve a custom PHP front controller (e.g. "serve backend/index.php") or to
-# run a long-running PHP script as a worker process (e.g. "php worker.php").
-#
-#entrypoint: serve index.php
 
 handlers:
 - url: /
-  static_files: www/login.php
-  upload: www/login.php
+  script: index.php
+# Serve images as static resources.
+- url: /(.+\.(gif|png|jpg))$
+  static_files: \1
+  upload: .+\.(gif|png|jpg)$
+  application_readable: true
+
+# Serve php scripts.
+- url: /(.+\.php)$
+  script: \1
