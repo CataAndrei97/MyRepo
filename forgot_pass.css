@@ -1,0 +1,10 @@
+input[type=submit] {
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    height: 25px;
+    width: 220px;
+ } 
+ body {
+ 	text-align: center;
+ }

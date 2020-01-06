@@ -1,0 +1,21 @@
+input[type=submit] {
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    height: 25px;
+    width: 220px;
+ } 
+ input[type=text],[type=password] {
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+ } 
+
+body {
+	text-align: center;
+}
+input {
+	position: relative;
+	display: block;
+	margin : 0 auto;
+}

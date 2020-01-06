@@ -1,0 +1,30 @@
+h2 {
+	text-align: center;
+	font-size:20px;
+	font-style: normal;
+	font-family:OCR A Std, monospace;
+	color:grey;
+
+	}
+input[type=submit] {
+	width:15%;
+	display:inline-block;
+	border: 1px solid black;
+	box-sizing: border-box;
+	background-color:#87CEFA;
+	height: 30px;
+	
+}
+input[type=text],[type=password] {
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+ } 
+body {
+	text-align: center;
+}
+input[name="name"],[name="pass"] {
+	position: relative;
+	display: block;
+	margin : 0 auto;
+}
