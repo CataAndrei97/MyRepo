@@ -4,7 +4,7 @@
 		<title>Home</title>
 		<link rel="stylesheet" href="home_page_style.css" />
 	</head>
-	<body background="Best-New-Android-Games-of-2018-–-Dandara.png">
+	<body background="Best-New-Android-Games-of-2018.png">
 		<div id="mySidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			<form method="post" action="enemies_against_fighters.php">
