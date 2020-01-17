@@ -57,7 +57,7 @@
 					}
 				}
 			}
-
+			echo $contor;
 			if($contor == 2) {				
 				$sql = "SELECT Name, Password FROM mygametable WHERE Name='$name' AND Password='$pass'";
 
