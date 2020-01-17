@@ -62,7 +62,7 @@
 				$sql = "SELECT Name, Password FROM mygametable WHERE Name='$name' AND Password='$pass'";
 				$res = sqlsrv_query($conn, $sql);
 
-				if (sqlsrv_num_rows($res) == 1) {
+				if (sqlsrv_num_rows($res)) {
 					log_file("You are logged in");
 				} else {
 					log_file("Invalid Name or Password");
