@@ -9,7 +9,7 @@
 	$row_count = sqlsrv_num_rows( $stmt );
 	
 	if($row_count) {
-		while($row = sqlsrv_fetch_array( $res)) {
+		while($row = sqlsrv_fetch_array( $stmt)) {
 			$_SESSION["message"] = $row["date"]. " : " . $row["name"]. " " ." say: " . $row["msg"]."<br>";
 			echo $_SESSION["message"];
 			console.log($row);
