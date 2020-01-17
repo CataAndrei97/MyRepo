@@ -3,7 +3,7 @@
 	include('db_connection.php');
 	$sql = "SELECT * FROM posts";
 	
-	$res = sqlsrv_query($sql);
+	$res = sqlsrv_query($conn, $sql);
 
 	$row_count = sqlsrv_num_rows( $res );
 	
