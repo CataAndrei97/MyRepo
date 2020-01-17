@@ -5,7 +5,7 @@
 	$name = $_SESSION["name"];
 	
 	$sql = "INSERT INTO posts(msg, name) VALUES('$msg','$name')";
-	sqlsrv_query($sql);
+	sqlsrv_query($conn, $sql);
 	
 	sqlsrv_close($conn);
 	
