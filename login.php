@@ -61,7 +61,7 @@
 			if($contor == 2) {				
 				$sql = "SELECT Name, Password FROM mygametable WHERE Name='$name' AND Password='$pass'";
 
-				if (sqlsrv_query($conn, $sql);) {
+				if (sqlsrv_query($conn, $sql)) {
 					log_file("You are logged in");
 				} else {
 					log_file("Invalid Name or Password");
