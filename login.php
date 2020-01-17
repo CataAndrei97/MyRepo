@@ -60,8 +60,11 @@
 			echo $contor;
 			if($contor == 2) {				
 				$sql = "SELECT Name, Password FROM mygametable WHERE Name='$name' AND Password='$pass'";
-				$res = sqlsrv_query($conn, $sql);
-				$row_count = sqlsrv_num_rows( $res );
+			    	$params = array();
+    				$options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+			 	$stmt = sqlsrv_query( $conn, $sql , $params, $options );
+				
+				$row_count = sqlsrv_num_rows( $stmt );
 				if ($row_count) {
 					log_file("You are logged in");
 				} else {
