@@ -8,4 +8,5 @@
 	sqlsrv_query($conn, $sql);
 	
 	sqlsrv_close($conn);
+	header('Location:home.php');
 ?>
