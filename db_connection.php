@@ -1,8 +1,8 @@
 <?php
 	include('log_fct.php');
-	$dbhost = "10.10.69.111";
-	$dbuser = "root";
-	$dbpass = "";
+	$dbhost = "mysqlserverwebapp.database.windows.net";
+	$dbuser = "sql";
+	$dbpass = "Aa12345678";
 	$db = "twdatabase";
 
 	$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
