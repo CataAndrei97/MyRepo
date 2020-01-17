@@ -85,8 +85,11 @@
 					}
 				}
 
-				if($err_cont == 0) {
+				if(!$err_cont) {
 					log_file("Pass the register");
+					
+					$_SESSION["name"] = $name;
+					
 					header("Location:home.php");
 				}
 
