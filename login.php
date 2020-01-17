@@ -69,6 +69,7 @@
 				}
 				
 				echo "Dupa sql";
+				echo $err_cont;
 				
 				if($err_cont == 0) {
 					log_file("Pass the loggin");
