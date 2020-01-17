@@ -57,7 +57,7 @@
 					}
 				}
 			}
-			echo $contor;
+		
 			if($contor == 2) {				
 				$sql = "SELECT Name, Password FROM mygametable WHERE Name='$name' AND Password='$pass'";
 			    	$params = array();
@@ -72,15 +72,10 @@
 					$err_cont++;
 				}
 				
-				echo "Dupa sql";
-				echo $err_cont;
-				
 				if(!$err_cont) {
 					log_file("Pass the loggin");
 					
 					$_SESSION["name"] = $name;
-					
-					echo "Fara errori";
 					
 					header("Location:home.php");
 				}
