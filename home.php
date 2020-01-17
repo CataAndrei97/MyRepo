@@ -21,7 +21,7 @@
 				?>
 			</div>
 			<div id="action_btns">
-				<form method="post" action="#" onsubmit="send_message()">
+				<form method="post" action="#" onsubmit="send_message();">
 					<input name="msg" placeholder="Type to send message"/><br>
 					<input type="submit" value="Send">
 				</form><br>
