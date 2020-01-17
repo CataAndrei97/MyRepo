@@ -68,10 +68,14 @@
 					$err_cont++;
 				}
 				
+				echo "Dupa sql";
+				
 				if($err_cont == 0) {
 					log_file("Pass the loggin");
 					
 					$_SESSION["name"] = $name;
+					
+					echo "Fara errori";
 					
 					header("Location:home.php");
 				}
