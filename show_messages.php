@@ -2,8 +2,9 @@
 	session_start();
 	include('db_connection.php');
 	$sql = "SELECT * FROM posts";
+	$params = array();
 	
-	$res = sqlsrv_query($conn, $sql);
+	$res = sqlsrv_query($conn, $sql, $params);
 
 	$row_count = sqlsrv_num_rows( $res );
 	
