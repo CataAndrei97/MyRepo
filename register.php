@@ -75,13 +75,13 @@
 				if (sqlsrv_query($conn, $sql)) {
 					log_file("New record created successfully");
 				} else {
-					if(preg_match("/Duplicate entry/",mysqli_error($conn))) {
+					if(preg_match("/Duplicate entry/",sqlsrv_errors($conn))) {
 						$userExists = "This username already exists!";
 						$err_cont++;
 						log_file($userExists);
 					} else {
 						$err_cont++;
-						log_file("Error: " . mysqli_error($conn));
+						log_file("Error: " . sqlsrv_errors($conn));
 					}
 				}
 
@@ -91,7 +91,7 @@
 				}
 
 				log_file("You are now disconnected from database!");
-				mysqli_close($conn);
+				sqlsrv_close($conn);
 			}
 		?>
 		
