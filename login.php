@@ -27,7 +27,6 @@
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				if (empty($_POST["name"])) {
 					$nameErr = "Name is required";
-					echo "Eroare nume";
 					$err_cont++;
 					log_file($nameErr);
 				} else {
@@ -44,7 +43,6 @@
 
 				if (empty($_POST["pass"])) {
 					$passErr = "Password is required!";
-					echo "Eroare pass";
 					$err_cont++;
 					log_file($passErr);
 				} else {
@@ -62,8 +60,9 @@
 			echo $contor;
 			if($contor == 2) {				
 				$sql = "SELECT Name, Password FROM mygametable WHERE Name='$name' AND Password='$pass'";
-
-				if (sqlsrv_query($conn, $sql)) {
+				$res = sqlsrv_query($conn, $sql);
+				$row_count = sqlsrv_num_rows( $res );
+				if ($row_count) {
 					log_file("You are logged in");
 				} else {
 					log_file("Invalid Name or Password");
