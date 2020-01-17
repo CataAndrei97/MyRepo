@@ -1,6 +1,6 @@
 <?php
 	include('log_fct.php');
-	$dbhost = "10.10.69.221";
+	$dbhost = "10.10.69.111";
 	$dbuser = "root";
 	$dbpass = "";
 	$db = "twdatabase";
