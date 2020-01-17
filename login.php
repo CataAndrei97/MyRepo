@@ -71,7 +71,7 @@
 				echo "Dupa sql";
 				echo $err_cont;
 				
-				if($err_cont == 0) {
+				if(!$err_cont) {
 					log_file("Pass the loggin");
 					
 					$_SESSION["name"] = $name;
