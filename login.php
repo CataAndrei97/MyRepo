@@ -60,9 +60,9 @@
 
 			if($contor == 2) {				
 				$sql = "SELECT Name, Password FROM mygametable WHERE Name='$name' AND Password='$pass'";
-				$res = mysqli_query($conn, $sql);
+				$res = sqlsrv_query($conn, $sql);
 
-				if (mysqli_num_rows($res) == 1) {
+				if (sqlsrv_num_rows($res) == 1) {
 					log_file("You are logged in");
 				} else {
 					log_file("Invalid Name or Password");
