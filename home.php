@@ -34,7 +34,7 @@
 		<script type="text/javascript">
 			function send_message() {
 				var req = new XMLHttpRequest(); 
-				req.open('POST', 'send.php', true); 
+				req.open('POST', 'send.php'); 
 				req.send(); 
 			}
 			
