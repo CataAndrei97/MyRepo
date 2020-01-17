@@ -21,7 +21,7 @@
 				?>
 			</div>
 			<div id="action_btns">
-				<form method="post" action="send.php">
+				<form method="post" action="#" onsubmit="send_message()">
 					<input name="msg" placeholder="Type to send message"/><br>
 					<input type="submit" value="Send">
 				</form><br>
@@ -32,6 +32,12 @@
 	
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript">
+			function send_message() {
+				var req = new XMLHttpRequest(); 
+				req.open('POST', 'send.php', true); 
+				req.send(); 
+			}
+			
 			function chat_ajax(){ 
 				var req = new XMLHttpRequest(); 
 				req.onreadystatechange = function() { 
