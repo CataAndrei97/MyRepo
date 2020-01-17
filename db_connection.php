@@ -12,7 +12,7 @@ catch (PDOException $e) {
 }
 
 // SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "sql", "pwd" => "{your_password_here}", "Database" => "twdatabase", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$connectionInfo = array("UID" => "sql", "pwd" => "Aa12345678", "Database" => "twdatabase", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:mysqlserverwebapp.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
