@@ -78,7 +78,7 @@
 				}
 
 				log_file("You are now disconnected from database!");
-				mysqli_close($conn);
+				sqlsrv_close($conn);
 			}
 		?>
 
