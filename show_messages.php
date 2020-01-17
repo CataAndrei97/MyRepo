@@ -14,5 +14,5 @@
 		}
 	}
 	
-	$conn->close();
+ 	sqlsrv_close($conn);	
 ?>
