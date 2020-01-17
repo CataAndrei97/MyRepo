@@ -72,7 +72,7 @@
 			if($contor == 3) {
 				$sql = "INSERT INTO mygametable (Name, Password, Email) VALUES ('$name', '$pass', '$email')";
 
-				if (mysqli_query($conn, $sql)) {
+				if (sqlsrv_query($conn, $sql)) {
 					log_file("New record created successfully");
 				} else {
 					if(preg_match("/Duplicate entry/",mysqli_error($conn))) {
