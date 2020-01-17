@@ -12,9 +12,6 @@
 		while($row = sqlsrv_fetch_array( $stmt)) {
 			$_SESSION["message"] = $row["date"]. " : " . $row["name"]. " " ." say: " . $row["msg"]."<br>";
 			echo $_SESSION["message"];
-			console.log($row);
-			
-			print json_encode($row);
 		}
 	}
 	
