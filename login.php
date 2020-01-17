@@ -27,6 +27,7 @@
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				if (empty($_POST["name"])) {
 					$nameErr = "Name is required";
+					echo "Eroare nume";
 					$err_cont++;
 					log_file($nameErr);
 				} else {
@@ -43,6 +44,7 @@
 
 				if (empty($_POST["pass"])) {
 					$passErr = "Password is required!";
+					echo "Eroare pass";
 					$err_cont++;
 					log_file($passErr);
 				} else {
