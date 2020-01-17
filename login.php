@@ -95,15 +95,7 @@
 			<input type="submit" name="submit" value="Login">  
 		</form>
 		<br>
-		<form method="POST" action="forgot_pass.php">
-			<input type="submit" name="forgot_pass" value="Forgot password"> 
-		</form>
-		<br>
 
-		<form method="post" action="reset_pass.php">
-			<input type="submit" name="reset_btn" value="Reset password">
-		</form>
-		<br>
 		<form method="post" action="index.php">
 			<input type="submit" name="submit" value="Go back">  
 		</form>
