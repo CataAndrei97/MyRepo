@@ -5,9 +5,9 @@
 	$name = $_SESSION["name"];
 	
 	$sql = "INSERT INTO posts(msg, name) VALUES('$msg','$name')";
-	$conn->query($sql);
+	sqlsrv_query($sql);
 	
-	$conn->close();
+	sqlsrv_close($conn);
 	
 	header('Location:home.php');
 ?>
