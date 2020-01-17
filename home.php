@@ -28,9 +28,6 @@
 				<form method="post" action="logout.php">
 					<input type="submit" value="Logout">
 				</form>
-				<form action="http://192.168.16.113:3000/">
-					<input type="submit" value="Chat with socket">
-				</form>
 			</div>
 	
 		<script type="text/javascript" src="jquery.js"></script>
